@@ -9,13 +9,30 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var input: String
+    let formatter = { () -> NumberFormatter in
+        let formattter = NumberFormatter()
+        formattter.maximumFractionDigits = 1
+        return formattter
+    } ()
+
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            TextField("Eingabe", text: $input)
+                .accessibility(identifier: "Input")
+                .padding().multilineTextAlignment(.center)
+
+            Text(localizedConversion(input,
+                                     formatter: formatter,
+                                     map: fahrenheit))
+                .accessibility(identifier: "Output")
+                .padding()
+        }.padding()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(input: "")
     }
 }

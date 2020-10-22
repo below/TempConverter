@@ -11,24 +11,37 @@ import XCTest
 
 class TempConverterTests: XCTestCase {
 
+    var formatter: NumberFormatter!
+
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        formatter = NumberFormatter()
+        formatter.locale = Locale(identifier: "US")
+        formatter.maximumFractionDigits = 1
+        formatter.minimumFractionDigits = 1
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testCelciusToFahrenheit() throws {
+        let input = 0.0
+        let output = fahrenheit(celcius: input)
+        XCTAssertEqual(output, 32.0)
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testBasicConversion() {
+        let output = localizedConversion("1")
+        XCTAssertEqual(output, "1")
     }
 
+    func testLocalizedConversion() {
+        let output = localizedConversion("1", formatter: self.formatter)
+        XCTAssertEqual(output, "1.0")
+    }
+
+    func testGermanLocalizedConversion() {
+        formatter.locale = Locale(identifier: "DE")
+        let output = localizedConversion("2,56", formatter: formatter)
+        XCTAssertEqual(output, "2,6")
+    }
 }

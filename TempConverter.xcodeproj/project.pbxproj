@@ -15,6 +15,7 @@
 		CBD3290A254203EB00F9881B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBD32908254203EB00F9881B /* LaunchScreen.storyboard */; };
 		CBD32915254203EB00F9881B /* TempConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD32914254203EB00F9881B /* TempConverterTests.swift */; };
 		CBD32920254203EC00F9881B /* TempConverterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD3291F254203EC00F9881B /* TempConverterUITests.swift */; };
+		CBD3292E2542277E00F9881B /* TemperatureConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD3292D2542277E00F9881B /* TemperatureConverter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		CBD3291B254203EB00F9881B /* TempConverterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TempConverterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD3291F254203EC00F9881B /* TempConverterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempConverterUITests.swift; sourceTree = "<group>"; };
 		CBD32921254203EC00F9881B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBD3292D2542277E00F9881B /* TemperatureConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureConverter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				CBD328FD254203EA00F9881B /* AppDelegate.swift */,
 				CBD328FF254203EA00F9881B /* SceneDelegate.swift */,
 				CBD32901254203EA00F9881B /* ContentView.swift */,
+				CBD3292D2542277E00F9881B /* TemperatureConverter.swift */,
 				CBD32903254203EB00F9881B /* Assets.xcassets */,
 				CBD32908254203EB00F9881B /* LaunchScreen.storyboard */,
 				CBD3290B254203EB00F9881B /* Info.plist */,
@@ -270,6 +273,7 @@
 				CBD328FE254203EA00F9881B /* AppDelegate.swift in Sources */,
 				CBD32900254203EA00F9881B /* SceneDelegate.swift in Sources */,
 				CBD32902254203EA00F9881B /* ContentView.swift in Sources */,
+				CBD3292E2542277E00F9881B /* TemperatureConverter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
