@@ -7,17 +7,27 @@ platform :ios do
   end
 
   desc "Sync our code signing"
-  lane :sync_signing do
+  lane :signing do
+      sync_code_signing # match
+
+      mapping = Actions.lane_context[
+        SharedValues::MATCH_PROVISIONING_PROFILE_MAPPING
+      ]
+      update_code_signing_settings(
+        profile_name: mapping[ENV['MATCH_APP_IDENTIFIER']]
+      )
+
   end
 
   desc "Build our App"
-  lane :build_our_app do
-    sync_signing
+  lane :build do
+    signing
+    build_ios_app #gym
   end
 
   desc "Release our app"
   lane :upload_app do
-    build_our_app
+    build
   end
 
 end

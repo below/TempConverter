@@ -458,7 +458,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"TempConverter/Preview Content\"";
 				DEVELOPMENT_TEAM = M3DTZN9V9B;
 				ENABLE_PREVIEWS = YES;
@@ -469,6 +470,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.vonbelow.TempConverter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.vonbelow.TempConverter";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
