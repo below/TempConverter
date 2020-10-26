@@ -7,9 +7,17 @@ variables:
 
 stages:
   - test
+  - build
 
 test_project:
   stage: test
+  script:
+  - bundle exec fastlane test
+  tags:
+  - Xcode11
+
+build_project:
+  stage: build
   script:
   - bundle exec fastlane test
   tags:
