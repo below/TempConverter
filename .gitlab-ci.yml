@@ -1,5 +1,10 @@
 before_script:
   - bundle install
+
+variables:
+  LC_ALL: "en_US.UTF-8"
+  LANG: "en_US.UTF-8"
+
 stages:
   - test
 
