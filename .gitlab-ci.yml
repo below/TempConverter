@@ -1,0 +1,9 @@
+stages:
+  - simple
+
+list_files:
+  stage: simple
+  script:
+  - ls
+  tags:
+  - Xcode
