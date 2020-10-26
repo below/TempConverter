@@ -26,14 +26,14 @@ Run our tests
 fastlane ios signing
 ```
 Sync our code signing
-### ios build_our_app
+### ios build
 ```
-fastlane ios build_our_app
+fastlane ios build
 ```
 Build our App
-### ios upload_app
+### ios release
 ```
-fastlane ios upload_app
+fastlane ios release
 ```
 Release our app
 
