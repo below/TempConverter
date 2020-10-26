@@ -5,4 +5,20 @@ platform :ios do
   lane :test do
     run_tests # SCAN
   end
+
+  desc "Sync our code signing"
+  lane :sync_signing do
+  end
+
+  desc "Build our App"
+  lane :build_our_app do
+    sync_signing
+  end
+
+  desc "Release our app"
+  lane :upload_app do
+    build_our_app
+  end
+
 end
+
