@@ -8,7 +8,7 @@ variables:
 stages:
   - test
   - build
-  - relase
+  - release
 
 test_project:
   stage: test
